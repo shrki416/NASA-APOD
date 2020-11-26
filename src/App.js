@@ -31,14 +31,26 @@ const App = () => {
 
     h1,
     h2 {
-      text-align: center;
+      display: flex;
     }
+
+    h2 {
+      color: #1e272e;
+    }
+  `;
+
+  const Header = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   `;
 
   return (
     <App>
-      <h1>NASA</h1>
-      <h2>Astronomy Picture of the Day</h2>
+      <Header>
+        <h1>NASA</h1>
+        <h2>Astronomy Picture of the Day</h2>
+      </Header>
       <Nasa
         copyright={data.copyright}
         date={data.date}

@@ -10,16 +10,16 @@ const Img = styled.img`
 
 const Explanation = styled.h3`
   white-space: nowrap;
-  /* padding: 1em; */
+  padding: 0.5em;
   color: #0b3d91;
 `;
 
 const Footer = styled.footer`
-  /* padding: 1em; */
   font-family: nasalization, sans-serif;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-end;
+  color: #1e272e;
 `;
 
 function NASA({ copyright, date, title, image, explanation }) {
