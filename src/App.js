@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import Nasa from "./NASA";
 import axios from "axios";
 import "./App.css";
 
@@ -13,7 +14,7 @@ const App = () => {
     axios
       .get(url)
       .then((response) => setData(response.data))
-      .catch((error) => console.log(error));
+      .catch((error) => console.error(error));
   };
 
   useEffect(() => {
@@ -21,15 +22,17 @@ const App = () => {
   }, [getPhotoOfTheDay]);
 
   return (
-    <div className="App">
+    <>
       <h1>NASA</h1>
       <h2>Astronomy Picture of the Day</h2>
-      <p>{data.copyright}</p>
-      <p>{data.date}</p>
-      <p>{data.title}</p>
-      <img src={data.hdurl} alt={data.title} />
-      <p>{data.explanation}</p>
-    </div>
+      <Nasa
+        copyright={data.copyright}
+        date={data.date}
+        title={data.title}
+        image={data.hdurl}
+        explanation={data.explanation}
+      />
+    </>
   );
 };
 
