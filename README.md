@@ -6,7 +6,7 @@ Checkout the project [HERE](https://aa-nasa-apod.netlify.app/)
 
 A small React to practice working with APIs
 
-![image](src/images/apod.png);
+![image](src/images/apod.png)
 
 ## Summary
 
