@@ -51,13 +51,7 @@ const App = () => {
         <h1>NASA</h1>
         <h2>Astronomy Picture of the Day</h2>
       </Header>
-      <Nasa
-        copyright={data.copyright}
-        date={data.date}
-        title={data.title}
-        image={data.hdurl}
-        explanation={data.explanation}
-      />
+      <Nasa data={data} />
     </App>
   );
 };

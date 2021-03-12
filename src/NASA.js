@@ -22,16 +22,17 @@ const Footer = styled.footer`
   color: #1e272e;
 `;
 
-function NASA({ copyright, date, title, image, explanation }) {
+function NASA({ data }) {
+  const { hdurl: image, explanation, date, copyright, title } = data;
   return (
     <>
       <Img src={image} alt={image}></Img>
 
-      {explanation ? (
+      {explanation && (
         <Ticker offset="run-in" speed={Number(7)}>
           {() => <Explanation>{`${explanation}.... `}</Explanation>}
         </Ticker>
-      ) : null}
+      )}
       <Footer>
         <h4>{`© ${copyright}`}</h4>
         <h4>{title}</h4>
